@@ -212,6 +212,97 @@
 
       </section>
 
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education" aria-labelledby="education-heading">
+        <div class="my-auto">
+          <h2 id="education-heading" class="mb-5">Education</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content me-auto">
+              <h3 class="mb-0">Universitas Terbuka</h3>
+              <div class="subheading mb-3">Bachelor’s Degree in Information Systems</div>
+            </div>
+            <div class="resume-date text-md-end">
+              <span class="text-primary">2022 - Present</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content me-auto">
+              <h3 class="mb-0">Vocational High School Darussalam Panongan</h3>
+              <div class="subheading mb-3">Computer and Network Engineering</div>
+              <p></p>
+            </div>
+            <div class="resume-date text-md-end">
+              <span class="text-primary"> 2017 - 2020</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills" aria-labelledby="skills-heading">
+        <div class="my-auto">
+          <h2 id="skills-heading" class="mb-5">Skills</h2>
+
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content me-auto">
+              <h3 class="mb-0">Server Administration</h3>
+              <ul aria-label="Server administration skills">
+              <li>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
+                Linux Server ( Redhat, Ubuntu, Suse )</li>
+              <li>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
+                Docker</li>
+              <li>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
+                Virtualization ( Proxmox, VMware Exsi )</li>
+              </ul>              
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content me-auto">
+              <h3 class="mb-0">Networking</h3>
+              <ul aria-label="Networking skills">
+              <li>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
+                Switch Management ( Cisco )</li>
+              <li>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
+                Router ( Mikrotik, Cisco )</li>
+              <li>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
+                Firewall ( Cisco, Mikrotik )</li>
+              <li>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
+                Management Wirelless ( Mikrotik, Tplink )</li>
+              <li>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
+                IP Address V6</li>
+              </ul>                                             
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content me-auto">
+              <h3 class="mb-0">Cloud Administration</h3>
+              <ul aria-label="Cloud administration skills">
+              <li>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
+                Amazon Web Services ( AWS )</li>
+              <li>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
+                Microsoft Azure Cloud ( Azure )</li>
+              </ul>             
+            </div>
+          </div>
+
+ 
+        </div>
+      </section>
+
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects" aria-labelledby="projects-heading">
         <div class="my-auto">
           <h2 id="projects-heading" class="mb-5">Projects</h2>

@@ -768,12 +768,31 @@ a:active {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   transition: color var(--transition-fast);
+  position: relative;
 }
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
   color: rgb(255, 255, 255);
 }
 .navbar-dark .navbar-nav .nav-link.active {
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255) !important;
+  font-weight: 800;
+}
+.navbar-dark .navbar-nav .nav-link.active::before {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+}
+@media (max-width: 991px) {
+  .navbar-dark .navbar-nav .nav-link.active::before {
+    left: 0;
+    width: 3px;
+  }
 }
 
 .navbar-toggler {
