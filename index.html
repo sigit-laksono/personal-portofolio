@@ -1,408 +1,812 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Professional portfolio of Muhammad Sigit Laksono - Cloud Engineer. Experienced in AWS cloud solutions, infrastructure optimization, and network security.">
-    <meta name="author" content="Muhammad Sigit Laksono">
-    <meta name="keywords" content="cloud engineer, AWS, cloud solutions, infrastructure, DevOps, network security, Jakarta">
-    
-    <!-- Cache Control -->
-    <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
-
-    <title>Portofolio Sigit</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Sigit Laksono - Cloud Architect Portfolio</title>
 
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/resume.min.css" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-  </head>
+    <style>
+        :root {
+            --primary-orange: #f97316;
+            --primary-amber: #f59e0b;
+            --slate-50: #f8fafc;
+            --slate-100: #f1f5f9;
+            --slate-200: #e2e8f0;
+            --slate-400: #94a3b8;
+            --slate-600: #475569;
+            --slate-800: #1e293b;
+            --slate-900: #0f172a;
+        }
 
-  <body id="page-top">
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: var(--slate-900);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
 
-    <!-- Skip to main content link for accessibility -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+        /* --- Sidebar Navigation --- */
+        .sidebar {
+            width: 280px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: white;
+            border-right: 1px solid var(--slate-100);
+            z-index: 2000;
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+        }
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" role="navigation" aria-label="Main navigation">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top" aria-label="Home - Muhammad Sigit Laksono">
-        <span class="d-block d-lg-none">Muhammad Sigit Laksono</span>
-        <span class="d-none d-lg-block">
-          <picture>
-            <source type="image/webp"
-                    srcset="img/profile-sm.webp 480w,
-                            img/profile-md.webp 768w,
-                            img/profile.webp 1080w"
-                    sizes="(max-width: 768px) 100vw, 300px">
-            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" 
-                 src="img/profile.jpg"
-                 srcset="img/profile-sm.jpg 480w,
-                         img/profile-md.jpg 768w,
-                         img/profile.jpg 1080w"
-                 sizes="(max-width: 768px) 100vw, 300px"
-                 alt="Profile photo of Muhammad Sigit Laksono, Cloud Engineer">
-          </picture>
-        </span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav" role="menubar">
-          <li class="nav-item" role="none">
-            <a class="nav-link js-scroll-trigger" href="#about" role="menuitem">About</a>
-          </li>
-          <li class="nav-item" role="none">
-            <a class="nav-link js-scroll-trigger" href="#skills" role="menuitem">Skills</a>
-          </li>
-          <li class="nav-item" role="none">
-            <a class="nav-link js-scroll-trigger" href="#experience" role="menuitem">Experience</a>
-          </li>
-          <li class="nav-item" role="none">
-            <a class="nav-link js-scroll-trigger" href="#projects" role="menuitem">Projects</a>
-          </li>
-          <li class="nav-item" role="none">
-            <a class="nav-link js-scroll-trigger" href="#Certifications" role="menuitem">Certifications</a>
-          </li>
-          <li class="nav-item" role="none">
-            <a class="nav-link js-scroll-trigger" href="#Community" role="menuitem">Community</a>
-          </li>
-          <li class="nav-item" role="none">
-            <a class="nav-link js-scroll-trigger" href="#education" role="menuitem">Education</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
 
-    <div class="container-fluid p-0">
+        .sidebar::-webkit-scrollbar-thumb {
+            background-color: var(--slate-200);
+            border-radius: 20px;
+        }
 
-      <main id="main-content">
+        .profile-card {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="about" aria-labelledby="about-heading">
-        <div class="my-auto">
-          <h1 id="about-heading" class="mb-0">Muhammad
-            <span class="text-primary">Sigit Laksono</span>
-          </h1>
-          <div class="subheading mb-5">Cloud Architect | Jakarta, Indonesia | (+62) 851-1748-6455 |
-            <a href="mailto:sigitlaksono926@gmail.com" aria-label="Email Muhammad Sigit Laksono">sigitlaksono926@gmail.com</a>
-          </div>
-          <p class="mb-5">I am Experienced in leveraging AWS based cloud solutions to deliver reliable and scalable architecture. A proactive approach to optimizing infrastructure and security ensures optimal performance, while supporting business efficiency and effective collaboration to achieve higher strategic value.</p>
-          <ul class="list-inline list-social-icons mb-0" aria-label="Social media links">
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/m-sigitlaksono/" aria-label="Visit Muhammad Sigit Laksono's LinkedIn profile" target="_blank" rel="noopener noreferrer">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
-                  <i class="fab fa-linkedin fa-stack-1x fa-inverse" aria-hidden="true"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://github.com/sigit-laksono" aria-label="Visit Muhammad Sigit Laksono's GitHub profile" target="_blank" rel="noopener noreferrer">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
-                  <i class="fab fa-github fa-stack-1x fa-inverse" aria-hidden="true"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
+        .profile-img-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 1.25rem;
+            padding: 4px;
+            background: linear-gradient(45deg, var(--primary-orange), var(--primary-amber));
+            border-radius: 2rem;
+            box-shadow: 0 10px 20px rgba(249, 115, 22, 0.15);
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1.8rem;
+            background: white;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 0.85rem 1.25rem;
+            color: var(--slate-600);
+            font-weight: 600;
+            border-radius: 1rem;
+            margin-bottom: 0.4rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background-color: #fff7ed;
+            color: var(--primary-orange);
+        }
+
+        /* --- Main Content --- */
+        main {
+            margin-left: 280px;
+            padding: 4rem;
+            max-width: 1100px;
+        }
+
+        section {
+            padding-bottom: 5rem;
+        }
+
+        .section-title-badge {
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            color: var(--primary-orange);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-size: 3.25rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary-orange), var(--primary-amber));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- Skills Grid --- */
+        .filter-container {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .filter-btn {
+            border: 1px solid var(--slate-200);
+            background: white;
+            color: var(--slate-600);
+            padding: 0.5rem 1.25rem;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .filter-btn.active {
+            background-color: var(--primary-orange);
+            border-color: var(--primary-orange);
+            color: white;
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
+        }
+
+        .skill-card {
+            background: white;
+            border: 1px solid var(--slate-100);
+            border-radius: 24px;
+            padding: 2.25rem 1.75rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-orange);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        .skill-icon {
+            width: 54px;
+            height: 54px;
+            background: var(--slate-50);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-orange);
+            transition: background 0.3s ease;
+        }
+
+        .skill-title {
+            font-weight: 800;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--slate-900);
+        }
+
+        .skill-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-category {
+            color: var(--slate-400);
+        }
+
+        .meta-level {
+            color: var(--primary-orange);
+        }
+
+        .skill-item.hidden {
+            display: none;
+        }
+
+        /* --- Content Cards --- */
+        .content-card {
+            background: var(--slate-50);
+            border: 1px solid var(--slate-100);
+            border-radius: 2rem;
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .content-card:hover {
+            background: white;
+            border-color: #ffedd5;
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.05);
+        }
+
+        /* --- Projects --- */
+        .project-card {
+            border-radius: 2rem;
+            overflow: hidden;
+            background: white;
+            border: 1px solid var(--slate-100);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-orange);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-img {
+            height: 180px;
+            background: var(--slate-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--slate-400);
+        }
+
+        .tech-badge {
+            font-size: 0.65rem;
+            background: var(--slate-100);
+            padding: 0.3rem 0.7rem;
+            border-radius: 8px;
+            font-weight: 700;
+            color: var(--slate-600);
+            margin-right: 4px;
+            margin-bottom: 4px;
+            display: inline-block;
+        }
+
+        /* --- Mobile Responsiveness --- */
+        .mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--slate-100);
+            z-index: 1500;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media (max-width: 991.98px) {
+            .sidebar {
+                transform: translateX(-100%);
+                width: 280px;
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+                box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+            }
+
+            main {
+                margin-left: 0;
+                padding: 7rem 1.25rem 2rem;
+            }
+
+            .mobile-header {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.3);
+            backdrop-filter: blur(4px);
+            z-index: 1800;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        .btn-close-sidebar {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: var(--slate-50);
+            border: none;
+            padding: 0.5rem;
+            border-radius: 0.75rem;
+            color: var(--slate-600);
+        }
+
+        .footer-cta {
+            background: var(--slate-900);
+            border-radius: 3rem;
+            padding: 4rem 2rem;
+            color: white;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-orange);
+            border: none;
+            padding: 1.15rem 2.25rem;
+            border-radius: 1.25rem;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <div class="fw-bolder fs-5 tracking-tighter">SIGIT <span style="color: var(--primary-orange);">LAKSONO</span>
         </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills" aria-labelledby="skills-heading">
-        <div class="my-auto">
-          <h2 id="skills-heading" class="mb-5">Skills</h2>
-
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content me-auto">
-              <h3 class="mb-0">Server Administration</h3>
-              <ul aria-label="Server administration skills">
-              <li>
-                <i class="fa-li fas fa-check" aria-hidden="true"></i>
-                Linux Server ( Redhat, Ubuntu, Suse )</li>
-              <li>
-                <i class="fa-li fas fa-check" aria-hidden="true"></i>
-                Docker</li>
-              <li>
-                <i class="fa-li fas fa-check" aria-hidden="true"></i>
-                Virtualization ( Proxmox, VMware Exsi )</li>
-              </ul>              
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content me-auto">
-              <h3 class="mb-0">Networking</h3>
-              <ul aria-label="Networking skills">
-              <li>
-                <i class="fa-li fas fa-check" aria-hidden="true"></i>
-                Switch Management ( Cisco )</li>
-              <li>
-                <i class="fa-li fas fa-check" aria-hidden="true"></i>
-                Router ( Mikrotik, Cisco )</li>
-              <li>
-                <i class="fa-li fas fa-check" aria-hidden="true"></i>
-                Firewall ( Cisco, Mikrotik )</li>
-              <li>
-                <i class="fa-li fas fa-check" aria-hidden="true"></i>
-                Management Wirelless ( Mikrotik, Tplink )</li>
-              <li>
-                <i class="fa-li fas fa-check" aria-hidden="true"></i>
-                IP Address V6</li>
-              </ul>                                             
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content me-auto">
-              <h3 class="mb-0">Cloud Administration</h3>
-              <ul aria-label="Cloud administration skills">
-              <li>
-                <i class="fa-li fas fa-check" aria-hidden="true"></i>
-                Amazon Web Services ( AWS )</li>
-              <li>
-                <i class="fa-li fas fa-check" aria-hidden="true"></i>
-                Microsoft Azure Cloud ( Azure )</li>
-              </ul>             
-            </div>
-          </div>
-
- 
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience" aria-labelledby="experience-heading">
-        <div class="my-auto">
-          <h2 id="experience-heading" class="mb-5">Experience</h2>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content me-auto">
-              <h3 class="mb-0">Senior Cloud Engineer</h3>
-              <div class="subheading mb-3">PT Dikstra Cipta Solusi</div>
-              <p>As a Senior Cloud Engineer at PT Dijkstra Cipta Solusi, I play a role in designing and implementing cloud solutions for various clients, ensuring their infrastructure is secure, scalable and efficient. With a consultative approach, I work closely with the team to deliver the best solutions tailored to each client's business needs. During my time here, I have successfully completed a number of large projects including on-premise infrastructure migration to AWS, cloud security optimization, and Server monitoring using tools such as Cloudwatch, Grafana, ElasticSearch, which improved the performance and stability of our clients' systems.</p>
-            </div>
-            <div class="resume-date text-md-end">
-              <span class="text-primary">January 2022 - Present</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content me-auto">
-              <h3 class="mb-0">IT Support</h3>
-              <div class="subheading mb-3">PT Wellcomm Indo Pratama</div>
-              <p>As IT Support at PT Wellcomm Indo Pratama, I am responsible for troubleshooting IT devices, including computers, printers and networks, to ensure the company's daily operations run smoothly. I support staff in resolving technical issues quickly and efficiently, providing proactive solutions, and ensuring optimal IT device performance. With a focus on service and effectiveness, I help maintain the productivity of the entire team through timely and reliable resolution of IT issues.</p>
-            </div>
-            <div class="resume-date text-md-end">
-              <span class="text-primary">September 2020 - December 2021</span>
-            </div>
-          </div>
-
-
-        </div>
-
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects" aria-labelledby="projects-heading">
-        <div class="my-auto">
-          <h2 id="projects-heading" class="mb-5">Projects</h2>
-          
-          <div class="projects-grid" role="list" aria-label="Portfolio projects">
-            
-            <!-- Project Card 1 -->
-            <article class="project-card" role="listitem">
-                <div class="project-image">
-                  <img src="img/projects/project1.jpg" 
-                       srcset="img/projects/project1-sm.jpg 480w,
-                               img/projects/project1-md.jpg 768w,
-                               img/projects/project1-lg.jpg 1200w"
-                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                       alt="Screenshot of AWS Cloud Infrastructure Migration project showing EC2 instances, RDS database, and S3 storage configuration"
-                       loading="lazy"
-                       class="img-fluid">
-                  <div class="project-overlay" aria-hidden="true">
-                    <div class="project-links">
-                      <a href="#" class="btn btn-primary btn-sm" aria-label="View demo of AWS Cloud Migration project">
-                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
-                      </a>
-                      <a href="https://github.com/M-Sigit" class="btn btn-secondary btn-sm" aria-label="View source code of AWS Cloud Migration project on GitHub">
-                        <i class="fab fa-github" aria-hidden="true"></i> Code
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="project-content">
-                  <h3 class="project-title">AWS Cloud Migration</h3>
-                  <p class="project-description">Successfully migrated on-premise infrastructure to AWS cloud, implementing EC2, RDS, S3, and CloudFront for improved scalability and performance. Reduced infrastructure costs by 40% while increasing system reliability.</p>
-                  <div class="project-tech" aria-label="Technologies used">
-                    <span class="tech-badge">AWS</span>
-                    <span class="tech-badge">EC2</span>
-                    <span class="tech-badge">RDS</span>
-                    <span class="tech-badge">S3</span>
-                    <span class="tech-badge">CloudFront</span>
-                  </div>
-                </div>
-            </article>
-
-            <!-- Project Card 2 -->
-            <article class="project-card" role="listitem">
-                <div class="project-image">
-                  <img src="img/projects/project2.jpg" 
-                       srcset="img/projects/project2-sm.jpg 480w,
-                               img/projects/project2-md.jpg 768w,
-                               img/projects/project2-lg.jpg 1200w"
-                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                       alt="Screenshot of Infrastructure Monitoring System dashboard with Grafana showing real-time metrics, Prometheus data, and CloudWatch integration"
-                       loading="lazy"
-                       class="img-fluid">
-                  <div class="project-overlay" aria-hidden="true">
-                    <div class="project-links">
-                      <a href="#" class="btn btn-primary btn-sm" aria-label="View demo of Infrastructure Monitoring System project">
-                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
-                      </a>
-                      <a href="https://github.com/M-Sigit" class="btn btn-secondary btn-sm" aria-label="View source code of Infrastructure Monitoring System project on GitHub">
-                        <i class="fab fa-github" aria-hidden="true"></i> Code
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="project-content">
-                  <h3 class="project-title">Infrastructure Monitoring System</h3>
-                  <p class="project-description">Implemented comprehensive monitoring solution using Grafana, Prometheus, and CloudWatch for real-time infrastructure visibility. Enabled proactive issue detection and reduced downtime by 60%.</p>
-                  <div class="project-tech" aria-label="Technologies used">
-                    <span class="tech-badge">Grafana</span>
-                    <span class="tech-badge">Prometheus</span>
-                    <span class="tech-badge">CloudWatch</span>
-                    <span class="tech-badge">ElasticSearch</span>
-                  </div>
-                </div>
-            </article>
-
-            <!-- Project Card 3 -->
-            <article class="project-card" role="listitem">
-                <div class="project-image">
-                  <img src="img/projects/project3.jpg" 
-                       srcset="img/projects/project3-sm.jpg 480w,
-                               img/projects/project3-md.jpg 768w,
-                               img/projects/project3-lg.jpg 1200w"
-                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                       alt="Screenshot of Enterprise Network Security implementation showing Cisco and Mikrotik firewall configuration with VLANs and VPN setup"
-                       loading="lazy"
-                       class="img-fluid">
-                  <div class="project-overlay" aria-hidden="true">
-                    <div class="project-links">
-                      <a href="#" class="btn btn-primary btn-sm" aria-label="View demo of Enterprise Network Security project">
-                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
-                      </a>
-                      <a href="https://github.com/M-Sigit" class="btn btn-secondary btn-sm" aria-label="View source code of Enterprise Network Security project on GitHub">
-                        <i class="fab fa-github" aria-hidden="true"></i> Code
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="project-content">
-                  <h3 class="project-title">Enterprise Network Security</h3>
-                  <p class="project-description">Designed and deployed enterprise-grade network security infrastructure using Cisco and Mikrotik firewalls, implementing VLANs, VPN, and advanced routing protocols for secure multi-site connectivity.</p>
-                  <div class="project-tech" aria-label="Technologies used">
-                    <span class="tech-badge">Cisco</span>
-                    <span class="tech-badge">Mikrotik</span>
-                    <span class="tech-badge">VPN</span>
-                    <span class="tech-badge">VLAN</span>
-                    <span class="tech-badge">Firewall</span>
-                  </div>
-                </div>
-            </article>
-
-          </div>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Certifications" aria-labelledby="certifications-heading">
-        <div class="my-auto">
-          <h2 id="certifications-heading" class="mb-5">Certifications</h2>
-          <ul class="fa-ul mb-0" aria-label="Professional certifications">
-            <li>
-              <i class="fa-li fas fa-trophy text-warning" aria-hidden="true"></i>
-              AWS Certified Solutions Architect - Associate</li>
-            <li>
-              <i class="fa-li fas fa-trophy text-warning" aria-hidden="true"></i>
-              Cisco Certified Network Associate - CCNA </li>
-            <li>
-              <i class="fa-li fas fa-trophy text-warning" aria-hidden="true"></i>
-              MikroTik Certified Network Associate - MTCNA </li>
-            <li>
-              <i class="fa-li fas fa-trophy text-warning" aria-hidden="true"></i>
-              MikroTik Certified Routing Engineer - MTCRE </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Community" aria-labelledby="community-heading">
-        <div class="my-auto">
-          <h2 id="community-heading" class="mb-5">Community</h2>
-          
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content me-auto">
-              <h3 class="mb-0">Trainer</h3>
-              <div class="subheading mb-3">TekajeCyber ID</div>
-              <p>I am active as a trainer in the Tekajecyber community, I share knowledge and skills in the field of network technology. I teach various topics, including Network Fundamentals, Cisco, Mikrotik, and Linux. With an interactive approach, I help community members understand the basics of networking, device setup, and server management, giving them a strong foundation to grow in the field of information technology.</p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education" aria-labelledby="education-heading">
-        <div class="my-auto">
-          <h2 id="education-heading" class="mb-5">Education</h2>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content me-auto">
-              <h3 class="mb-0">Universitas Terbuka</h3>
-              <div class="subheading mb-3">Bachelor's Degree in Information Systems</div>
-            </div>
-            <div class="resume-date text-md-end">
-              <span class="text-primary">2022 - Present</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content me-auto">
-              <h3 class="mb-0">Vocational High School Darussalam Panongan</h3>
-              <div class="subheading mb-3">Computer and Network Engineering</div>
-              <p></p>
-            </div>
-            <div class="resume-date text-md-end">
-              <span class="text-primary"> 2017 - 2020</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      </main>
-
+        <button class="btn border-0 p-0" id="menuToggle"><i data-lucide="menu" size="28"></i></button>
     </div>
 
-    <!-- Bootstrap 5 JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <div class="overlay" id="overlay"></div>
 
-    <!-- Custom scripts - Vanilla JavaScript (No jQuery) -->
-    <!-- Load component modules first -->
-    <script src="js/lazy-loading.min.js"></script>
-    <script src="js/navigation.min.js"></script>
-    <!-- Load main initialization script last -->
-    <script src="js/resume.min.js"></script>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <button class="btn-close-sidebar d-lg-none" id="closeSidebar"><i data-lucide="x" size="20"></i></button>
 
-  </body>
+        <div class="profile-card">
+            <div class="profile-img-container">
+                <img src="img/profile.jpg" alt="Sigit">
+            </div>
+            <h1 class="h6 fw-bold mb-1">SIGIT LAKSONO</h1>
+            <p class="text-orange fw-bold"
+                style="color: var(--primary-orange); font-size: 0.65rem; letter-spacing: 0.2em;">CLOUD ARCHITECT</p>
+        </div>
+
+        <div class="nav-links flex-grow-1">
+            <a href="#about" class="nav-link active"><i data-lucide="user" size="18"></i> About</a>
+            <a href="#skills" class="nav-link"><i data-lucide="code-2" size="18"></i> Skills</a>
+            <a href="#experience" class="nav-link"><i data-lucide="briefcase" size="18"></i> Experience</a>
+            <a href="#projects" class="nav-link"><i data-lucide="layout" size="18"></i> Projects</a>
+            <a href="#certifications" class="nav-link"><i data-lucide="award" size="18"></i> Certifications</a>
+            <a href="#community" class="nav-link"><i data-lucide="users" size="18"></i> Community</a>
+            <a href="#education" class="nav-link"><i data-lucide="graduation-cap" size="18"></i> Education</a>
+        </div>
+
+        <div class="mt-auto d-flex justify-content-center gap-3 border-top pt-4">
+            <a href="https://www.linkedin.com/in/m-sigitlaksono/" target="_blank" class="text-secondary"><i
+                    data-lucide="linkedin" size="20"></i></a>
+            <a href="https://github.com/sigit-laksono" target="_blank" class="text-secondary"><i data-lucide="github"
+                    size="20"></i></a>
+            <a href="mailto:sigitlaksono926@gmail.com" class="text-secondary"><i data-lucide="mail" size="20"></i></a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about">
+            <span class="section-title-badge">Overview</span>
+            <h2 class="hero-title">Muhammad <br><span class="gradient-text">Sigit Laksono.</span></h2>
+            <div class="subheading mb-4 fw-bold text-muted d-flex align-items-center gap-2">
+                <i data-lucide="map-pin" size="18"></i> Jakarta, Indonesia
+            </div>
+            <p class="lead text-muted mb-5" style="max-width: 800px; line-height: 1.8;">
+                I am Experienced in leveraging AWS based cloud solutions to deliver reliable and scalable architecture.
+                A proactive approach to optimizing infrastructure and security ensures optimal performance, while
+                supporting business efficiency and effective collaboration to achieve higher strategic value.
+            </p>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white border rounded-4 d-flex align-items-center gap-4">
+                        <div class="p-3 bg-light rounded-4 text-primary"><i data-lucide="mail"></i></div>
+                        <div>
+                            <div class="small text-muted font-bold uppercase tracking-widest mb-1"
+                                style="font-size: 10px;">Email</div>
+                            <div class="fw-bold">sigitlaksono926@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 bg-white border rounded-4 d-flex align-items-center gap-4">
+                        <div class="p-3 bg-light rounded-4 text-warning"><i data-lucide="phone"></i></div>
+                        <div>
+                            <div class="small text-muted font-bold uppercase tracking-widest mb-1"
+                                style="font-size: 10px;">Phone (Whatsapp Only)</div>
+                            <div class="fw-bold">+62 851-1748-6455</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills">
+            <div class="d-flex align-items-center gap-4 mb-4">
+                <h3 class="h4 fw-bold text-uppercase m-0 tracking-tight">Technical Skills</h3>
+                <div class="flex-grow-1 border-bottom" style="height: 1px;"></div>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="admin">Server Admin</button>
+                <button class="filter-btn" data-filter="networking">Networking</button>
+                <button class="filter-btn" data-filter="cloud">Cloud</button>
+            </div>
+
+            <div class="row g-4" id="skills-grid">
+                <!-- Linux Server -->
+                <div class="col-xl-4 col-md-6 skill-item" data-category="admin">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i data-lucide="terminal" size="28"></i></div>
+                        <h3 class="skill-title">Linux Server</h3>
+                        <div class="skill-meta">
+                            <span class="meta-category">Server Admin</span>
+                            <span class="meta-level">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Docker -->
+                <div class="col-xl-4 col-md-6 skill-item" data-category="admin">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i data-lucide="container" size="28"></i></div>
+                        <h3 class="skill-title">Docker</h3>
+                        <div class="skill-meta">
+                            <span class="meta-category">Server Admin</span>
+                            <span class="meta-level">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proxmox -->
+                <div class="col-xl-4 col-md-6 skill-item" data-category="admin">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i data-lucide="server" size="28"></i></div>
+                        <h3 class="skill-title">Proxmox</h3>
+                        <div class="skill-meta">
+                            <span class="meta-category">Server Admin</span>
+                            <span class="meta-level">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cisco -->
+                <div class="col-xl-4 col-md-6 skill-item" data-category="networking">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i data-lucide="network" size="28"></i></div>
+                        <h3 class="skill-title">Cisco</h3>
+                        <div class="skill-meta">
+                            <span class="meta-category">Networking</span>
+                            <span class="meta-level">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mikrotik -->
+                <div class="col-xl-4 col-md-6 skill-item" data-category="networking">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i data-lucide="router" size="28"></i></div>
+                        <h3 class="skill-title">Mikrotik</h3>
+                        <div class="skill-meta">
+                            <span class="meta-category">Networking</span>
+                            <span class="meta-level">Expert</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AWS -->
+                <div class="col-xl-4 col-md-6 skill-item" data-category="cloud">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i data-lucide="cloud" size="28"></i></div>
+                        <h3 class="skill-title">AWS</h3>
+                        <div class="skill-meta">
+                            <span class="meta-category">Cloud</span>
+                            <span class="meta-level">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Azure -->
+                <div class="col-xl-4 col-md-6 skill-item" data-category="cloud">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i data-lucide="cloud-sun" size="28"></i></div>
+                        <h3 class="skill-title">Microsoft Azure</h3>
+                        <div class="skill-meta">
+                            <span class="meta-category">Cloud</span>
+                            <span class="meta-level">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="d-flex align-items-center gap-4 mb-5">
+                <h3 class="h4 fw-bold text-uppercase m-0">Experience</h3>
+                <div class="flex-grow-1 border-bottom" style="height: 1px;"></div>
+            </div>
+
+            <div class="content-card mb-3">
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-4 gap-3">
+                    <div>
+                        <h4 class="h5 fw-bold mb-1">Senior Cloud Engineer</h4>
+                        <div class="fw-bold small uppercase tracking-wider" style="color: var(--primary-orange);">PT
+                            Dikstra Cipta Solusi</div>
+                    </div>
+                    <span class="badge bg-white text-dark border px-4 py-2 fw-bold align-self-start">January 2022 -
+                        Present</span>
+                </div>
+                <p class="text-muted small leading-relaxed border-start border-4 ps-4"
+                    style="border-color: var(--primary-orange) !important;">
+                    As a Senior Cloud Engineer at PT Dijkstra Cipta Solusi, I play a role in designing and implementing
+                    cloud solutions for various clients, ensuring their infrastructure is secure, scalable and
+                    efficient. With a consultative approach, I work closely with the team to deliver the best solutions
+                    tailored to each client's business needs. During my time here, I have successfully completed a
+                    number of large projects including on-premise infrastructure migration to AWS, cloud security
+                    optimization, and Server monitoring using tools such as Cloudwatch, Grafana, ElasticSearch, which
+                    improved the performance and stability of our clients' systems.
+                </p>
+            </div>
+
+            <div class="content-card">
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-4 gap-3">
+                    <div>
+                        <h4 class="h5 fw-bold mb-1">IT Support</h4>
+                        <div class="fw-bold small uppercase tracking-wider" style="color: var(--primary-orange);">PT
+                            Wellcomm Indo Pratama</div>
+                    </div>
+                    <span class="badge bg-white text-dark border px-4 py-2 fw-bold align-self-start">September 2020 -
+                        December 2021</span>
+                </div>
+                <p class="text-muted small leading-relaxed border-start border-4 ps-4"
+                    style="border-color: var(--primary-orange) !important;">
+                    As IT Support at PT Wellcomm Indo Pratama, I am responsible for troubleshooting IT devices,
+                    including computers, printers and networks, to ensure the company's daily operations run smoothly. I
+                    support staff in resolving technical issues quickly and efficiently, providing proactive solutions,
+                    and ensuring optimal IT device performance. With a focus on service and effectiveness, I help
+                    maintain the productivity of the entire team through timely and reliable resolution of IT issues.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="d-flex align-items-center gap-4 mb-5">
+                <h3 class="h4 fw-bold text-uppercase m-0">Projects</h3>
+                <div class="flex-grow-1 border-bottom" style="height: 1px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                    <div class="project-card">
+                        <div class="project-img"><i data-lucide="cloud-lightning" size="48"></i></div>
+                        <div class="p-4">
+                            <h4 class="h6 fw-bold mb-2">AWS Cloud Migration</h4>
+                            <p class="text-muted small mb-3">Migrated on-premise infrastructure to AWS implementing EC2,
+                                RDS, and S3. Reduced costs by 40%.</p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">AWS</span><span class="tech-badge">EC2</span><span
+                                    class="tech-badge">S3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="project-card">
+                        <div class="project-img"><i data-lucide="monitor" size="48"></i></div>
+                        <div class="p-4">
+                            <h4 class="h6 fw-bold mb-2">Infra Monitoring System</h4>
+                            <p class="text-muted small mb-3">Monitoring using Grafana & Prometheus for real-time
+                                visibility and 60% downtime reduction.</p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Grafana</span><span class="tech-badge">Prometheus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="project-card">
+                        <div class="project-img"><i data-lucide="shield-check" size="48"></i></div>
+                        <div class="p-4">
+                            <h4 class="h6 fw-bold mb-2">Network Security</h4>
+                            <p class="text-muted small mb-3">Deployed Cisco & Mikrotik firewalls with VLANs & VPN setup
+                                for secure connectivity.</p>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Cisco</span><span class="tech-badge">Mikrotik</span><span
+                                    class="tech-badge">VPN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications">
+            <div class="d-flex align-items-center gap-4 mb-5">
+                <h3 class="h4 fw-bold text-uppercase m-0">Certifications</h3>
+                <div class="flex-grow-1 border-bottom" style="height: 1px;"></div>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="p-3 bg-white border rounded-3 d-flex align-items-center gap-3 shadow-sm">
+                        <i data-lucide="award" class="text-warning"></i>
+                        <span class="fw-bold small">AWS Certified Solutions Architect - Associate</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 bg-white border rounded-3 d-flex align-items-center gap-3 shadow-sm">
+                        <i data-lucide="award" class="text-warning"></i>
+                        <span class="fw-bold small">Cisco CCNA (Network Associate)</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 bg-white border rounded-3 d-flex align-items-center gap-3 shadow-sm">
+                        <i data-lucide="award" class="text-warning"></i>
+                        <span class="fw-bold small">MikroTik MTCNA (Certified Network Associate)</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 bg-white border rounded-3 d-flex align-items-center gap-3 shadow-sm">
+                        <i data-lucide="award" class="text-warning"></i>
+                        <span class="fw-bold small">MikroTik MTCRE (Certified Routing Engineer)</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 bg-white border rounded-3 d-flex align-items-center gap-3 shadow-sm">
+                        <i data-lucide="award" class="text-warning"></i>
+                        <span class="fw-bold small">AWS Certified Advanced Networking - Specialty</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community">
+            <div class="d-flex align-items-center gap-4 mb-5">
+                <h3 class="h4 fw-bold text-uppercase m-0">Community</h3>
+                <div class="flex-grow-1 border-bottom" style="height: 1px;"></div>
+            </div>
+            <div class="content-card">
+                <h4 class="h5 fw-bold mb-1">Trainer</h4>
+                <div class="text-orange fw-bold small mb-3" style="color: var(--primary-orange);">TekajeCyber ID</div>
+                <p class="text-muted small">Mengajar Fundamental Jaringan, Cisco, Mikrotik, dan Linux untuk membantu
+                    anggota komunitas membangun fondasi IT yang kuat.</p>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <div class="d-flex align-items-center gap-4 mb-5">
+                <h3 class="h4 fw-bold text-uppercase m-0">Education</h3>
+                <div class="flex-grow-1 border-bottom" style="height: 1px;"></div>
+            </div>
+            <div class="content-card mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                    <h4 class="h6 fw-bold m-0">Universitas Terbuka</h4>
+                    <span class="text-muted small fw-bold">2022 - Present</span>
+                </div>
+                <p class="small text-muted m-0">Bachelor's Degree in Information Systems</p>
+            </div>
+            <div class="content-card">
+                <div class="d-flex justify-content-between mb-1">
+                    <h4 class="h6 fw-bold m-0">SMK Darussalam Panongan</h4>
+                    <span class="text-muted small fw-bold">2017 - 2020</span>
+                </div>
+                <p class="small text-muted m-0">Computer and Network Engineering</p>
+            </div>
+        </section>
+
+        <footer class="footer-cta mt-5">
+            <h3 class="fw-bold mb-3">Ready to Build Something?</h3>
+            <p class="text-white-50 small mb-4">Let's discuss how I can help optimize your cloud infrastructure.</p>
+            <a href="https://wa.me/6285117486455" target="_blank"
+                class="btn btn-primary-custom d-inline-flex align-items-center gap-3 active:scale-95">
+                <i data-lucide="message-circle"></i> Get In Touch
+            </a>
+            <p class="mt-5 small text-white-50 uppercase tracking-widest" style="font-size: 10px;">© 2024
+                Muhammad Sigit Laksono</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Mobile Sidebar Logic Fixed
+        const menuToggle = document.getElementById('menuToggle');
+        const closeSidebar = document.getElementById('closeSidebar');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        const openMenu = () => {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeMenu = () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        menuToggle.addEventListener('click', openMenu);
+        closeSidebar.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const skillItems = document.querySelectorAll('.skill-item');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                skillItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            let current = "";
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
 
 </html>
