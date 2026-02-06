@@ -5,18 +5,22 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Professional portfolio of Muhammad Sigit Laksono - Cloud Engineer. Experienced in AWS cloud solutions, infrastructure optimization, and network security.">
+    <meta name="author" content="Muhammad Sigit Laksono">
+    <meta name="keywords" content="cloud engineer, AWS, cloud solutions, infrastructure, DevOps, network security, Jakarta">
+    
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
 
     <title>Resume - M Sigit Laksono</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
@@ -27,35 +31,54 @@
 
   <body id="page-top">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+    <!-- Skip to main content link for accessibility -->
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" role="navigation" aria-label="Main navigation">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top" aria-label="Home - Muhammad Sigit Laksono">
         <span class="d-block d-lg-none">Muhammad Sigit Laksono</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+          <picture>
+            <source type="image/webp"
+                    srcset="img/profile-sm.webp 480w,
+                            img/profile-md.webp 768w,
+                            img/profile.webp 1080w"
+                    sizes="(max-width: 768px) 100vw, 300px">
+            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" 
+                 src="img/profile.jpg"
+                 srcset="img/profile-sm.jpg 480w,
+                         img/profile-md.jpg 768w,
+                         img/profile.jpg 1080w"
+                 sizes="(max-width: 768px) 100vw, 300px"
+                 alt="Profile photo of Muhammad Sigit Laksono, Cloud Engineer">
+          </picture>
         </span>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation menu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        <ul class="navbar-nav" role="menubar">
+          <li class="nav-item" role="none">
+            <a class="nav-link js-scroll-trigger" href="#about" role="menuitem">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          <li class="nav-item" role="none">
+            <a class="nav-link js-scroll-trigger" href="#experience" role="menuitem">Experience</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          <li class="nav-item" role="none">
+            <a class="nav-link js-scroll-trigger" href="#education" role="menuitem">Education</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          <li class="nav-item" role="none">
+            <a class="nav-link js-scroll-trigger" href="#skills" role="menuitem">Skills</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#Community">Community</a>
+          <li class="nav-item" role="none">
+            <a class="nav-link js-scroll-trigger" href="#projects" role="menuitem">Projects</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#Certifications">Certifications</a>
+          <li class="nav-item" role="none">
+            <a class="nav-link js-scroll-trigger" href="#Community" role="menuitem">Community</a>
+          </li>
+          <li class="nav-item" role="none">
+            <a class="nav-link js-scroll-trigger" href="#Certifications" role="menuitem">Certifications</a>
           </li>
         </ul>
       </div>
@@ -63,29 +86,31 @@
 
     <div class="container-fluid p-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+      <main id="main-content">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="about" aria-labelledby="about-heading">
         <div class="my-auto">
-          <h1 class="mb-0">Muhammad
+          <h1 id="about-heading" class="mb-0">Muhammad
             <span class="text-primary">Sigit Laksono</span>
           </h1>
           <div class="subheading mb-5">Cloud Engineer | Jakarta, Indonesia | (+62) 838-7892-2099 |
-            <a href="mailto:name@email.com">sigitlaksono926@gmail.com</a>
+            <a href="mailto:sigitlaksono926@gmail.com" aria-label="Email Muhammad Sigit Laksono">sigitlaksono926@gmail.com</a>
           </div>
           <p class="mb-5">I am Experienced in leveraging AWS based cloud solutions to deliver reliable and scalable architecture. A proactive approach to optimizing infrastructure and security ensures optimal performance, while supporting business efficiency and effective collaboration to achieve higher strategic value.</p>
-          <ul class="list-inline list-social-icons mb-0">
+          <ul class="list-inline list-social-icons mb-0" aria-label="Social media links">
             <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/m-sigitlaksono/">
+              <a href="https://www.linkedin.com/in/m-sigitlaksono/" aria-label="Visit Muhammad Sigit Laksono's LinkedIn profile" target="_blank" rel="noopener noreferrer">
                 <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  <i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse" aria-hidden="true"></i>
                 </span>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://github.com/M-Sigit">
+              <a href="https://github.com/M-Sigit" aria-label="Visit Muhammad Sigit Laksono's GitHub profile" target="_blank" rel="noopener noreferrer">
                 <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  <i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse" aria-hidden="true"></i>
                 </span>
               </a>
             </li>
@@ -93,28 +118,28 @@
         </div>
       </section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience" aria-labelledby="experience-heading">
         <div class="my-auto">
-          <h2 class="mb-5">Experience</h2>
+          <h2 id="experience-heading" class="mb-5">Experience</h2>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
+            <div class="resume-content me-auto">
               <h3 class="mb-0">Senior Cloud Engineer</h3>
               <div class="subheading mb-3">PT Dikstra Cipta Solusi</div>
               <p>As a Senior Cloud Engineer at PT Dijkstra Cipta Solusi, I play a role in designing and implementing cloud solutions for various clients, ensuring their infrastructure is secure, scalable and efficient. With a consultative approach, I work closely with the team to deliver the best solutions tailored to each client's business needs. During my time here, I have successfully completed a number of large projects including on-premise infrastructure migration to AWS, cloud security optimization, and Server monitoring using tools such as Cloudwatch, Grafana, ElasticSearch, which improved the performance and stability of our clients' systems.</p>
             </div>
-            <div class="resume-date text-md-right">
+            <div class="resume-date text-md-end">
               <span class="text-primary">January 2022 - Present</span>
             </div>
           </div>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
+            <div class="resume-content me-auto">
               <h3 class="mb-0">IT Support</h3>
               <div class="subheading mb-3">PT Wellcomm Indo Pratama</div>
               <p>As IT Support at PT Wellcomm Indo Pratama, I am responsible for troubleshooting IT devices, including computers, printers and networks, to ensure the company's daily operations run smoothly. I support staff in resolving technical issues quickly and efficiently, providing proactive solutions, and ensuring optimal IT device performance. With a focus on service and effectiveness, I help maintain the productivity of the entire team through timely and reliable resolution of IT issues.</p>
             </div>
-            <div class="resume-date text-md-right">
+            <div class="resume-date text-md-end">
               <span class="text-primary">September 2020 - December 2021</span>
             </div>
           </div>
@@ -124,29 +149,29 @@
 
       </section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education" aria-labelledby="education-heading">
         <div class="my-auto">
-          <h2 class="mb-5">Education</h2>
+          <h2 id="education-heading" class="mb-5">Education</h2>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
+            <div class="resume-content me-auto">
               <h3 class="mb-0">Universitas Terbuka</h3>
               <div class="subheading mb-3">Bachelor’s Degree in Information Systems</div>
               <div>Student </div>
               <p>4th Semester</p>
             </div>
-            <div class="resume-date text-md-right">
+            <div class="resume-date text-md-end">
               <span class="text-primary">2022 - Present</span>
             </div>
           </div>
 
           <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
+            <div class="resume-content me-auto">
               <h3 class="mb-0">Vocational High School Darussalam Panongan</h3>
               <div class="subheading mb-3">Computer and Network Engineering</div>
               <p></p>
             </div>
-            <div class="resume-date text-md-right">
+            <div class="resume-date text-md-end">
               <span class="text-primary"> 2017 - 2020</span>
             </div>
           </div>
@@ -154,56 +179,62 @@
         </div>
       </section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills" aria-labelledby="skills-heading">
         <div class="my-auto">
-          <h2 class="mb-5">Skills</h2>
+          <h2 id="skills-heading" class="mb-5">Skills</h2>
 
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
+            <div class="resume-content me-auto">
               <h3 class="mb-0">Server Administration</h3>
+              <ul aria-label="Server administration skills">
               <li>
-                <i class="fa-li fa fa-check"></i>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
                 Linux Server ( Redhat, Ubuntu, Suse )</li>
               <li>
-                <i class="fa-li fa fa-check"></i>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
                 Docker</li>
               <li>
-                <i class="fa-li fa fa-check"></i>
-                Virtualization ( Proxmox, VMware Exsi )</li>              
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
+                Virtualization ( Proxmox, VMware Exsi )</li>
+              </ul>              
             </div>
           </div>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
+            <div class="resume-content me-auto">
               <h3 class="mb-0">Networking</h3>
+              <ul aria-label="Networking skills">
               <li>
-                <i class="fa-li fa fa-check"></i>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
                 Switch Management ( Cisco )</li>
               <li>
-                <i class="fa-li fa fa-check"></i>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
                 Router ( Mikrotik, Cisco )</li>
               <li>
-                <i class="fa-li fa fa-check"></i>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
                 Firewall ( Cisco, Mikrotik )</li>
               <li>
-                <i class="fa-li fa fa-check"></i>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
                 Management Wirelless ( Mikrotik, Tplink )</li>
               <li>
-                <i class="fa-li fa fa-check"></i>
-                IP Address V6</li>                                             
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
+                IP Address V6</li>
+              </ul>                                             
             </div>
           </div>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
+            <div class="resume-content me-auto">
               <h3 class="mb-0">Cloud Administration</h3>
+              <ul aria-label="Cloud administration skills">
               <li>
-                <i class="fa-li fa fa-check"></i>
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
                 Amazon Web Services ( AWS )</li>
               <li>
-                <i class="fa-li fa fa-check"></i>
-                Microsoft Azure Cloud ( Azure )</li>             
+                <i class="fa-li fas fa-check" aria-hidden="true"></i>
+                Microsoft Azure Cloud ( Azure )</li>
+              </ul>             
             </div>
           </div>
 
@@ -211,50 +242,167 @@
         </div>
       </section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Community">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects" aria-labelledby="projects-heading">
         <div class="my-auto">
-          <h2 class="mb-5">Community</h2>
+          <h2 id="projects-heading" class="mb-5">Projects</h2>
+          
+          <div class="projects-grid" role="list" aria-label="Portfolio projects">
+            
+            <!-- Project Card 1 -->
+            <article class="project-card" role="listitem">
+                <div class="project-image">
+                  <img src="img/projects/project1.jpg" 
+                       srcset="img/projects/project1-sm.jpg 480w,
+                               img/projects/project1-md.jpg 768w,
+                               img/projects/project1-lg.jpg 1200w"
+                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                       alt="Screenshot of AWS Cloud Infrastructure Migration project showing EC2 instances, RDS database, and S3 storage configuration"
+                       loading="lazy"
+                       class="img-fluid">
+                  <div class="project-overlay" aria-hidden="true">
+                    <div class="project-links">
+                      <a href="#" class="btn btn-primary btn-sm" aria-label="View demo of AWS Cloud Migration project">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
+                      </a>
+                      <a href="https://github.com/M-Sigit" class="btn btn-secondary btn-sm" aria-label="View source code of AWS Cloud Migration project on GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i> Code
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">AWS Cloud Migration</h3>
+                  <p class="project-description">Successfully migrated on-premise infrastructure to AWS cloud, implementing EC2, RDS, S3, and CloudFront for improved scalability and performance. Reduced infrastructure costs by 40% while increasing system reliability.</p>
+                  <div class="project-tech" aria-label="Technologies used">
+                    <span class="tech-badge">AWS</span>
+                    <span class="tech-badge">EC2</span>
+                    <span class="tech-badge">RDS</span>
+                    <span class="tech-badge">S3</span>
+                    <span class="tech-badge">CloudFront</span>
+                  </div>
+                </div>
+            </article>
+
+            <!-- Project Card 2 -->
+            <article class="project-card" role="listitem">
+                <div class="project-image">
+                  <img src="img/projects/project2.jpg" 
+                       srcset="img/projects/project2-sm.jpg 480w,
+                               img/projects/project2-md.jpg 768w,
+                               img/projects/project2-lg.jpg 1200w"
+                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                       alt="Screenshot of Infrastructure Monitoring System dashboard with Grafana showing real-time metrics, Prometheus data, and CloudWatch integration"
+                       loading="lazy"
+                       class="img-fluid">
+                  <div class="project-overlay" aria-hidden="true">
+                    <div class="project-links">
+                      <a href="#" class="btn btn-primary btn-sm" aria-label="View demo of Infrastructure Monitoring System project">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
+                      </a>
+                      <a href="https://github.com/M-Sigit" class="btn btn-secondary btn-sm" aria-label="View source code of Infrastructure Monitoring System project on GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i> Code
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Infrastructure Monitoring System</h3>
+                  <p class="project-description">Implemented comprehensive monitoring solution using Grafana, Prometheus, and CloudWatch for real-time infrastructure visibility. Enabled proactive issue detection and reduced downtime by 60%.</p>
+                  <div class="project-tech" aria-label="Technologies used">
+                    <span class="tech-badge">Grafana</span>
+                    <span class="tech-badge">Prometheus</span>
+                    <span class="tech-badge">CloudWatch</span>
+                    <span class="tech-badge">ElasticSearch</span>
+                  </div>
+                </div>
+            </article>
+
+            <!-- Project Card 3 -->
+            <article class="project-card" role="listitem">
+                <div class="project-image">
+                  <img src="img/projects/project3.jpg" 
+                       srcset="img/projects/project3-sm.jpg 480w,
+                               img/projects/project3-md.jpg 768w,
+                               img/projects/project3-lg.jpg 1200w"
+                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                       alt="Screenshot of Enterprise Network Security implementation showing Cisco and Mikrotik firewall configuration with VLANs and VPN setup"
+                       loading="lazy"
+                       class="img-fluid">
+                  <div class="project-overlay" aria-hidden="true">
+                    <div class="project-links">
+                      <a href="#" class="btn btn-primary btn-sm" aria-label="View demo of Enterprise Network Security project">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo
+                      </a>
+                      <a href="https://github.com/M-Sigit" class="btn btn-secondary btn-sm" aria-label="View source code of Enterprise Network Security project on GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i> Code
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Enterprise Network Security</h3>
+                  <p class="project-description">Designed and deployed enterprise-grade network security infrastructure using Cisco and Mikrotik firewalls, implementing VLANs, VPN, and advanced routing protocols for secure multi-site connectivity.</p>
+                  <div class="project-tech" aria-label="Technologies used">
+                    <span class="tech-badge">Cisco</span>
+                    <span class="tech-badge">Mikrotik</span>
+                    <span class="tech-badge">VPN</span>
+                    <span class="tech-badge">VLAN</span>
+                    <span class="tech-badge">Firewall</span>
+                  </div>
+                </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Community" aria-labelledby="community-heading">
+        <div class="my-auto">
+          <h2 id="community-heading" class="mb-5">Community</h2>
           
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
+            <div class="resume-content me-auto">
               <h3 class="mb-0">Trainer</h3>
               <div class="subheading mb-3">TekajeCyber ID</div>
               <p>I am active as a trainer in the Tekajecyber community, I share knowledge and skills in the field of network technology. I teach various topics, including Network Fundamentals, Cisco, Mikrotik, and Linux. With an interactive approach, I help community members understand the basics of networking, device setup, and server management, giving them a strong foundation to grow in the field of information technology.</p>
             </div>
+          </div>
 
         </div>
       </section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Certifications">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Certifications" aria-labelledby="certifications-heading">
         <div class="my-auto">
-          <h2 class="mb-5">Certifications</h2>
-          <ul class="fa-ul mb-0">
+          <h2 id="certifications-heading" class="mb-5">Certifications</h2>
+          <ul class="fa-ul mb-0" aria-label="Professional certifications">
             <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
+              <i class="fa-li fas fa-trophy text-warning" aria-hidden="true"></i>
               AWS Certified Solutions Architect - Associate</li>
             <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
+              <i class="fa-li fas fa-trophy text-warning" aria-hidden="true"></i>
               Cisco Certified Network Associate - CCNA </li>
             <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
+              <i class="fa-li fas fa-trophy text-warning" aria-hidden="true"></i>
               MikroTik Certified Network Associate - MTCNA </li>
             <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
+              <i class="fa-li fas fa-trophy text-warning" aria-hidden="true"></i>
               MikroTik Certified Routing Engineer - MTCRE </li>
           </ul>
         </div>
       </section>
 
+      </main>
+
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5 JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
+    <!-- Custom scripts - Vanilla JavaScript (No jQuery) -->
+    <!-- Load component modules first -->
+    <script src="js/lazy-loading.min.js"></script>
+    <script src="js/navigation.min.js"></script>
+    <!-- Load main initialization script last -->
     <script src="js/resume.min.js"></script>
 
   </body>

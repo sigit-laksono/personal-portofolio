@@ -4,6 +4,35 @@
     font-weight: 600;
     text-transform: uppercase;
   }
+  
+  // Smooth transitions for navbar collapse on mobile
+  .navbar-collapse {
+    transition: height 0.35s ease;
+    
+    &.collapsing {
+      transition: height 0.35s ease;
+    }
+  }
+  
+  // Smooth transition for toggler icon
+  .navbar-toggler {
+    transition: all 0.3s ease;
+    border: none;
+    
+    &:focus {
+      box-shadow: none;
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+    
+    .navbar-toggler-icon {
+      transition: transform 0.3s ease;
+    }
+    
+    &:not(.collapsed) .navbar-toggler-icon {
+      transform: rotate(90deg);
+    }
+  }
 }
 
 @media (min-width: 992px) {

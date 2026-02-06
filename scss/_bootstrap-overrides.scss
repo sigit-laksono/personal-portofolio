@@ -1,16 +1,548 @@
+// Bootstrap Overrides
+// Custom overrides for Bootstrap 5 components using CSS variables
+// This file should be imported last to ensure proper cascade
+
+// ============================================================================
+// Color Utilities
+// ============================================================================
+
 .bg-primary {
-  background-color: $primary !important;
+  background-color: var(--primary-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary) !important;
 }
 
 .text-primary {
-  color: $primary !important;
+  color: var(--primary-color) !important;
 }
 
+.text-secondary {
+  color: var(--secondary-color) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
+// ============================================================================
+// Typography
+// ============================================================================
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-color);
+}
+
+// ============================================================================
+// Links
+// ============================================================================
+
 a {
-  color: $primary;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     color: darken($primary, 15%);
+    text-decoration: none;
+  }
+  
+  &:active {
+    color: darken($primary, 20%);
   }
 }
+
+// ============================================================================
+// Buttons
+// ============================================================================
+
+.btn {
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.25);
+  }
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: $white;
+  
+  &:hover,
+  &:focus {
+    background-color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+    color: $white;
+  }
+  
+  &:active {
+    background-color: darken($primary, 15%);
+    border-color: darken($primary, 15%);
+  }
+  
+  &:disabled {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    opacity: 0.6;
+  }
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: $white;
+  
+  &:hover,
+  &:focus {
+    background-color: darken($gray-600, 10%);
+    border-color: darken($gray-600, 10%);
+    color: $white;
+  }
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  
+  &:hover,
+  &:focus {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: $white;
+  }
+}
+
+// ============================================================================
+// Navbar
+// ============================================================================
+
+.navbar {
+  padding: var(--spacing-sm);
+  background-color: var(--primary-color);
+  
+  @media (max-width: 768px) {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}
+
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  color: $white;
+  transition: opacity var(--transition-fast);
+  
+  &:hover,
+  &:focus {
+    color: $white;
+    opacity: 0.9;
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+  
+  &:hover,
+  &:focus {
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  &.active {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+  transition: border-color var(--transition-fast);
+  
+  &:focus {
+    border-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
+  }
+  
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+// ============================================================================
+// Cards
+// ============================================================================
+
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.card-header {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  font-weight: var(--font-weight-bold);
+}
+
+.card-footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+}
+
+// ============================================================================
+// Forms
+// ============================================================================
+
+.form-control {
+  border-color: var(--border-color);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-main);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  
+  &:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25);
+  }
+  
+  &::placeholder {
+    color: var(--text-muted);
+  }
+}
+
+.form-label {
+  font-weight: var(--font-weight-bold);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.form-select {
+  border-color: var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  
+  &:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25);
+  }
+}
+
+// ============================================================================
+// Badges
+// ============================================================================
+
+.badge {
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--radius-sm);
+  padding: 0.35em 0.65em;
+}
+
+.badge-primary {
+  background-color: var(--primary-color);
+  color: $white;
+}
+
+.badge-secondary {
+  background-color: var(--secondary-color);
+  color: $white;
+}
+
+// ============================================================================
+// Alerts
+// ============================================================================
+
+.alert {
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+}
+
+.alert-primary {
+  background-color: lighten($primary, 35%);
+  border-color: lighten($primary, 25%);
+  color: darken($primary, 10%);
+}
+
+// ============================================================================
+// Modals
+// ============================================================================
+
+.modal-content {
+  border-radius: var(--radius-md);
+  border: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--spacing-md);
+}
+
+.modal-footer {
+  border-top: 1px solid var(--border-color);
+  padding: var(--spacing-md);
+}
+
+.modal-title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+// ============================================================================
+// Dropdowns
+// ============================================================================
+
+.dropdown-menu {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.dropdown-item {
+  color: var(--text-color);
+  transition: background-color var(--transition-fast);
+  
+  &:hover,
+  &:focus {
+    background-color: var(--bg-secondary);
+    color: var(--text-color);
+  }
+  
+  &.active {
+    background-color: var(--primary-color);
+    color: $white;
+  }
+}
+
+// ============================================================================
+// Pagination
+// ============================================================================
+
+.pagination {
+  .page-link {
+    color: var(--primary-color);
+    border-color: var(--border-color);
+    transition: all var(--transition-fast);
+    
+    &:hover,
+    &:focus {
+      background-color: var(--bg-secondary);
+      border-color: var(--border-color);
+      color: var(--primary-color);
+    }
+  }
+  
+  .page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: $white;
+  }
+  
+  .page-item.disabled .page-link {
+    color: var(--text-muted);
+    border-color: var(--border-color);
+  }
+}
+
+// ============================================================================
+// Breadcrumb
+// ============================================================================
+
+.breadcrumb {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.breadcrumb-item {
+  color: var(--text-color);
+  
+  &.active {
+    color: var(--text-muted);
+  }
+  
+  a {
+    color: var(--primary-color);
+    
+    &:hover {
+      color: darken($primary, 15%);
+    }
+  }
+}
+
+// ============================================================================
+// List Groups
+// ============================================================================
+
+.list-group-item {
+  border-color: var(--border-color);
+  color: var(--text-color);
+  
+  &:hover,
+  &:focus {
+    background-color: var(--bg-secondary);
+  }
+  
+  &.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: $white;
+  }
+}
+
+// ============================================================================
+// Progress Bars
+// ============================================================================
+
+.progress {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  height: 1rem;
+}
+
+.progress-bar {
+  background-color: var(--primary-color);
+  transition: width var(--transition-normal);
+}
+
+// ============================================================================
+// Tables
+// ============================================================================
+
+.table {
+  color: var(--text-color);
+  
+  thead th {
+    border-bottom: 2px solid var(--border-color);
+    font-weight: var(--font-weight-bold);
+  }
+  
+  td, th {
+    border-top: 1px solid var(--border-color);
+  }
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: var(--bg-secondary);
+}
+
+.table-hover tbody tr:hover {
+  background-color: var(--bg-secondary);
+}
+
+// ============================================================================
+// Tooltips & Popovers
+// ============================================================================
+
+.tooltip-inner {
+  background-color: var(--text-color);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-main);
+}
+
+.popover {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.popover-header {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  font-weight: var(--font-weight-bold);
+}
+
+// ============================================================================
+// Accordion
+// ============================================================================
+
+.accordion-button {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-weight: var(--font-weight-bold);
+  
+  &:not(.collapsed) {
+    background-color: var(--bg-secondary);
+    color: var(--primary-color);
+  }
+  
+  &:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25);
+  }
+}
+
+.accordion-item {
+  border: 1px solid var(--border-color);
+}
+
+// ============================================================================
+// Offcanvas
+// ============================================================================
+
+.offcanvas {
+  background-color: var(--bg-color);
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.offcanvas-title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+// ============================================================================
+// Spacing Utilities Override
+// ============================================================================
+
+// Override Bootstrap spacing utilities to use our CSS variables
+.mb-1 { margin-bottom: var(--spacing-xs) !important; }
+.mb-2 { margin-bottom: var(--spacing-sm) !important; }
+.mb-3 { margin-bottom: var(--spacing-md) !important; }
+.mb-4 { margin-bottom: var(--spacing-lg) !important; }
+.mb-5 { margin-bottom: var(--spacing-xl) !important; }
+
+.mt-1 { margin-top: var(--spacing-xs) !important; }
+.mt-2 { margin-top: var(--spacing-sm) !important; }
+.mt-3 { margin-top: var(--spacing-md) !important; }
+.mt-4 { margin-top: var(--spacing-lg) !important; }
+.mt-5 { margin-top: var(--spacing-xl) !important; }
+
+.p-1 { padding: var(--spacing-xs) !important; }
+.p-2 { padding: var(--spacing-sm) !important; }
+.p-3 { padding: var(--spacing-md) !important; }
+.p-4 { padding: var(--spacing-lg) !important; }
+.p-5 { padding: var(--spacing-xl) !important; }

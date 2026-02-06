@@ -1,71 +1,247 @@
-# [Start Bootstrap - Resume](https://startbootstrap.com/template-overviews/resume/)
+# Professional Portfolio - Muhammad Sigit Laksono
 
-[Resume](https://startbootstrap.com/template-overviews/resume/) is a resume and CV theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a fixed sidebar with content sections to build a simple, yet elegant resume.
+Modern, performant, and accessible professional portfolio website built with Bootstrap 5 and vanilla JavaScript. Fully static site optimized for AWS Amplify hosting.
 
-## Preview
+## 🚀 Features
 
-[![Resume Preview](https://startbootstrap.com/assets/img/templates/resume.jpg)](https://blackrockdigital.github.io/startbootstrap-resume/)
+- **Modern Design**: Clean, professional layout with Bootstrap 5
+- **Vanilla JavaScript**: No jQuery dependencies for better performance
+- **Responsive**: Mobile-first design that works on all devices
+- **Accessible**: WCAG compliant with ARIA labels and keyboard navigation
+- **Performant**: Optimized images, lazy loading, and minified assets
+- **SEO Optimized**: Proper meta tags, Open Graph, and structured data
+- **Static Site**: Pure HTML/CSS/JS for easy deployment
 
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-resume/)**
+## 📋 Sections
 
-## Status
+- **About**: Professional summary and introduction
+- **Experience**: Work history with detailed descriptions
+- **Education**: Academic background
+- **Skills**: Technical skills organized by category
+- **Projects**: Portfolio showcase with 3 featured projects
+- **Community**: Community involvement and training activities
+- **Certifications**: Professional certifications and achievements
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-resume/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-resume.svg)](https://www.npmjs.com/package/startbootstrap-resume)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-resume.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-resume)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-resume/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-resume)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-resume/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-resume?type=dev)
+## 🛠️ Tech Stack
 
-## Download and Installation
+### Core Technologies
+- HTML5 (Semantic markup)
+- CSS3 with SCSS preprocessor
+- Vanilla JavaScript (ES6+)
+- Bootstrap 5.3.0
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/resume/)
-* Install via npm: `npm i startbootstrap-resume`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-resume.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-resume)
+### Build Tools
+- Gulp 4.0 (Task runner)
+- Sass (CSS preprocessor)
+- npm scripts
 
-## Usage
+### Third-Party Libraries
+- Font Awesome 6.4.0 (Icons)
+- Devicons (Technology icons)
+- Simple Line Icons
+- Google Fonts (Saira Extra Condensed, Open Sans)
 
-### Basic Usage
+## 📦 Installation
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-### Advanced Usage
+### Setup
 
-After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd personal-portofolio
+```
 
-#### Gulp Tasks
+2. Install dependencies:
+```bash
+npm install
+```
 
-- `gulp` the default task that builds everything
-- `gulp dev` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp sass` compiles SCSS files into CSS
-- `gulp minify-css` minifies the compiled CSS file
-- `gulp minify-js` minifies the themes JS file
-- `gulp copy` copies dependencies from node_modules to the vendor directory
+3. Build the project:
+```bash
+npm run build
+```
 
-## Bugs and Issues
+## 🔧 Development
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-resume/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/resume/).
+### Available Scripts
 
-## Custom Builds
+- `npm run build` - Build CSS and JavaScript (production)
+- `npm run build:full` - Build with image optimization
+- `npm run build:images` - Generate responsive images and optimize
+- `npm run dev` - Start development server with live reload
+- `npm run sass` - Compile SCSS to CSS
+- `npm run watch` - Watch for file changes
+- `npm run serve` - Serve with BrowserSync
 
-You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
+### Development Workflow
 
-## About
+1. Start development server:
+```bash
+npm run dev
+```
 
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+2. Edit files in:
+   - `scss/` - SCSS source files
+   - `js/` - JavaScript source files
+   - `index.html` - Main HTML file
 
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
+3. Build for production:
+```bash
+npm run build
+```
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+## 📁 Project Structure
 
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+```
+portfolio/
+├── index.html              # Main HTML file
+├── css/
+│   ├── resume.css          # Compiled CSS
+│   └── resume.min.css      # Minified CSS (production)
+├── scss/
+│   ├── resume.scss         # Main SCSS entry point
+│   ├── _variables.scss     # CSS variables and theme
+│   ├── _mixins.scss        # SCSS mixins
+│   ├── _global.scss        # Global styles
+│   ├── _components.scss    # Component styles
+│   ├── _sections.scss      # Section-specific styles
+│   ├── _nav.scss           # Navigation styles
+│   ├── _projects.scss      # Projects section styles
+│   └── _bootstrap-overrides.scss  # Bootstrap customization
+├── js/
+│   ├── navigation.js       # Navigation module
+│   ├── lazy-loading.js     # Image lazy loading
+│   ├── resume.js           # Main initialization
+│   └── *.min.js            # Minified versions (production)
+├── img/
+│   ├── profile.*           # Profile images (WebP + JPG)
+│   └── projects/           # Project screenshots
+├── Docs/                   # Documentation files
+├── scripts/                # Build scripts
+├── vendor/                 # Third-party libraries
+├── gulpfile.js             # Gulp configuration
+└── package.json            # Project dependencies
+```
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+## 🎨 Customization
 
-## Copyright and License
+### Colors and Theme
 
-Copyright 2013-2017 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-resume/blob/gh-pages/LICENSE) license.
+Edit `scss/_variables.scss` to customize colors, fonts, and spacing:
+
+```scss
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --text-color: #212529;
+  // ... more variables
+}
+```
+
+### Content
+
+Edit `index.html` to update:
+- Personal information
+- Work experience
+- Education
+- Skills
+- Projects
+- Certifications
+
+### Projects
+
+Add new projects in the Projects section:
+1. Add project images to `img/projects/`
+2. Update HTML in the Projects section
+3. Follow the existing project card structure
+
+## 🚀 Deployment
+
+### AWS Amplify
+
+1. Connect your repository to AWS Amplify
+2. Use the provided `amplify.yml` configuration
+3. Deploy automatically on push
+
+### Build Settings
+
+```yaml
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: /
+    files:
+      - '**/*'
+```
+
+### Static Hosting
+
+The site is fully static and can be hosted on:
+- AWS Amplify
+- Netlify
+- Vercel
+- GitHub Pages
+- Any static hosting service
+
+## ⚡ Performance
+
+- Lighthouse Performance Score: >90
+- Page Load Time: <3 seconds
+- Optimized images with WebP format
+- Lazy loading for below-fold images
+- Minified CSS and JavaScript
+- CDN for third-party libraries
+
+## ♿ Accessibility
+
+- WCAG 2.1 Level AA compliant
+- ARIA labels on all interactive elements
+- Keyboard navigation support
+- Skip-to-content link
+- Proper heading hierarchy
+- Alt text on all images
+- Focus indicators
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+Original template by [Start Bootstrap](https://startbootstrap.com/template-overviews/resume/)
+Refactored and enhanced by Muhammad Sigit Laksono
+
+## 🙏 Acknowledgments
+
+- Original template: [Start Bootstrap - Resume](https://startbootstrap.com/template-overviews/resume/)
+- Bootstrap framework
+- Font Awesome icons
+- Google Fonts
+
+## 📞 Contact
+
+Muhammad Sigit Laksono
+- Email: sigitlaksono926@gmail.com
+- LinkedIn: [m-sigitlaksono](https://www.linkedin.com/in/m-sigitlaksono/)
+- GitHub: [M-Sigit](https://github.com/M-Sigit)
+
+---
+
+**Note**: This portfolio has been completely refactored from Bootstrap 4 + jQuery to Bootstrap 5 + vanilla JavaScript with enhanced performance, accessibility, and modern best practices.

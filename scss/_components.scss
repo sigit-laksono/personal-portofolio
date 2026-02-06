@@ -1,0 +1,143 @@
+// Components
+// Reusable component styles
+
+// Buttons
+.btn {
+  transition: all var(--transition-normal);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(189, 93, 56, 0.3);
+  }
+}
+
+// Cards
+.card {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  
+  &:hover {
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+// Navigation
+.navbar {
+  .nav-link {
+    transition: color var(--transition-fast);
+    
+    &:hover,
+    &:focus {
+      color: var(--primary-color) !important;
+    }
+    
+    &.active {
+      color: var(--primary-color) !important;
+    }
+  }
+}
+
+// Social Icons
+.list-social-icons {
+  a {
+    color: var(--text-color);
+    transition: color var(--transition-fast);
+    
+    &:hover {
+      color: var(--primary-color);
+    }
+    
+    .fa-lg {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+// Skill Icons
+.list-icons {
+  font-size: 3rem;
+  
+  .list-inline-item i {
+    transition: color var(--transition-fast);
+    
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+// Skip to content link (accessibility)
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: var(--spacing-sm);
+  z-index: 100;
+  text-decoration: none;
+  
+  &:focus {
+    top: 0;
+  }
+}
+
+// Focus indicators for accessibility
+*:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.btn:focus,
+.btn:focus-visible,
+.nav-link:focus,
+.nav-link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(189, 93, 56, 0.3);
+}
+
+// Enhanced focus for interactive elements
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+// Project card links focus
+.project-card a:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+// Social icons focus
+.list-social-icons a:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
+// Navbar toggler focus
+.navbar-toggler:focus,
+.navbar-toggler:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(189, 93, 56, 0.3);
+}
+

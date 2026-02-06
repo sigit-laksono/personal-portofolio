@@ -1,14 +1,229 @@
 // Mixins
-// Bootstrap Button Variant
+
+// Background cover
 @mixin background-cover {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+
+// Typography mixins
 @mixin body-font {
-  font-family: 'Open Sans', serif;
+  font-family: var(--font-main);
 }
+
 @mixin heading-font {
-  font-family: 'Saira Extra Condensed', serif;
+  font-family: var(--font-heading);
+}
+
+// Responsive breakpoint mixins (mobile-first approach)
+@mixin respond-above($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 576px) { @content; }
+  }
+  @else if $breakpoint == md {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media (min-width: 1024px) { @content; }
+  }
+  @else if $breakpoint == xl {
+    @media (min-width: 1200px) { @content; }
+  }
+}
+
+@mixin respond-below($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 575px) { @content; }
+  }
+  @else if $breakpoint == md {
+    @media (max-width: 767px) { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media (max-width: 1023px) { @content; }
+  }
+  @else if $breakpoint == xl {
+    @media (max-width: 1199px) { @content; }
+  }
+}
+
+@mixin respond-between($lower, $upper) {
+  @if $lower == sm and $upper == md {
+    @media (min-width: 576px) and (max-width: 767px) { @content; }
+  }
+  @else if $lower == md and $upper == lg {
+    @media (min-width: 768px) and (max-width: 1023px) { @content; }
+  }
+  @else if $lower == lg and $upper == xl {
+    @media (min-width: 1024px) and (max-width: 1199px) { @content; }
+  }
+}
+
+// Transition mixin
+@mixin transition($properties...) {
+  transition: $properties;
+}
+
+// Box shadow mixin
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+// Flexbox center mixin
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Grid auto-fit mixin
+@mixin grid-auto-fit($min-width, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: $gap;
+}
+
+// Hover lift effect mixin
+@mixin hover-lift($lift: -8px, $shadow: var(--shadow-lg)) {
+  transition: transform var(--transition-normal),
+              box-shadow var(--transition-normal);
+  
+  &:hover {
+    transform: translateY($lift);
+    box-shadow: $shadow;
+  }
+}
+
+// Fade in animation mixin
+@mixin fade-in($direction: up, $distance: 30px) {
+  opacity: 0;
+  
+  @if $direction == up {
+    transform: translateY($distance);
+  } @else if $direction == down {
+    transform: translateY(-$distance);
+  } @else if $direction == left {
+    transform: translateX($distance);
+  } @else if $direction == right {
+    transform: translateX(-$distance);
+  }
+  
+  transition: opacity var(--transition-slow),
+              transform var(--transition-slow);
+  
+  &.is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+// Overlay mixin
+@mixin overlay($bg-color: rgba(0, 0, 0, 0.8), $opacity: 0) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $bg-color;
+  opacity: $opacity;
+  transition: opacity var(--transition-normal);
+  
+  &:hover,
+  &.active {
+    opacity: 1;
+  }
+}
+
+// Aspect ratio mixin
+@mixin aspect-ratio($width, $height) {
+  aspect-ratio: $width / $height;
+  
+  // Fallback for browsers that don't support aspect-ratio
+  @supports not (aspect-ratio: 1 / 1) {
+    position: relative;
+    
+    &::before {
+      content: '';
+      display: block;
+      padding-top: percentage($height / $width);
+    }
+  }
+}
+
+// Truncate text mixin
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// Focus visible mixin
+@mixin focus-visible($color: var(--primary-color), $offset: 2px) {
+  &:focus {
+    outline: 2px solid $color;
+    outline-offset: $offset;
+  }
+  
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+  
+  &:focus-visible {
+    outline: 2px solid $color;
+    outline-offset: $offset;
+  }
+}
+
+// Card mixin
+@mixin card($padding: var(--spacing-md), $radius: var(--radius-md), $shadow: var(--shadow-md)) {
+  background: var(--bg-color);
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: $padding;
+}
+
+// Button reset mixin
+@mixin button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  
+  &:focus {
+    outline: revert;
+  }
+}
+
+// Visually hidden mixin (for accessibility)
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Container mixin
+@mixin container($max-width: 1200px, $padding: var(--spacing-md)) {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $padding;
 }

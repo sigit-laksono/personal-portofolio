@@ -1,82 +1,93 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
-var header = require('gulp-header');
-var cleanCSS = require('gulp-clean-css');
-var rename = require("gulp-rename");
-var uglify = require('gulp-uglify');
-var pkg = require('./package.json');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const browserSync = require('browser-sync').create();
+const header = require('gulp-header');
+const cleanCSS = require('gulp-clean-css');
+const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
+const imagemin = require('gulp-imagemin');
+const pkg = require('./package.json');
 
 // Set the banner content
-var banner = ['/*!\n',
-  ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-  ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-  ' * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n',
+const banner = ['/*!\n',
+  ' * <%= pkg.title %> v<%= pkg.version %>\n',
+  ' * Copyright 2013-' + (new Date()).getFullYear() + '\n',
+  ' * Licensed under <%= pkg.license %>\n',
   ' */\n',
   ''
 ].join('');
 
-// Compiles SCSS files from /scss into /css
-gulp.task('sass', function() {
+// Compile SCSS files from /scss into /css
+function compileSass() {
   return gulp.src('scss/resume.scss')
-    .pipe(sass())
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(header(banner, { pkg: pkg }))
     .pipe(gulp.dest('css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
-});
+    .pipe(browserSync.stream());
+}
 
 // Minify compiled CSS
-gulp.task('minify-css', ['sass'], function() {
+function minifyCSS() {
   return gulp.src('css/resume.css')
-    .pipe(cleanCSS({
-      compatibility: 'ie8'
-    }))
-    .pipe(rename({
-      suffix: '.min'
-    }))
+    .pipe(cleanCSS({ compatibility: 'ie10' }))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
-});
+    .pipe(browserSync.stream());
+}
 
 // Minify custom JS
-gulp.task('minify-js', function() {
-  return gulp.src('js/resume.js')
+function minifyJS() {
+  return gulp.src(['js/navigation.js', 'js/lazy-loading.js', 'js/resume.js'])
     .pipe(uglify())
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
-    .pipe(rename({
-      suffix: '.min'
-    }))
+    .pipe(header(banner, { pkg: pkg }))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('js'))
-    .pipe(browserSync.reload({
-      stream: true
+    .pipe(browserSync.stream());
+}
+
+// Optimize images
+async function optimizeImages() {
+  // Dynamic import untuk ESM modules
+  const imageminMozjpeg = (await import('imagemin-mozjpeg')).default;
+  const imageminPngquant = (await import('imagemin-pngquant')).default;
+  
+  return gulp.src('img/**/*.{jpg,jpeg,png}')
+    .pipe(imagemin([
+      imageminMozjpeg({
+        quality: 85,
+        progressive: true
+      }),
+      imageminPngquant({
+        quality: [0.8, 0.9],
+        speed: 4
+      })
+    ], {
+      verbose: true
     }))
-});
+    .pipe(gulp.dest('img'));
+}
+
+// Generate responsive image sizes
+function generateResponsiveImages() {
+  // Note: This requires manual processing or additional tools like sharp
+  // For now, this is a placeholder that copies images
+  // In production, use tools like sharp or imagemagick to generate multiple sizes
+  console.log('Note: Generate responsive images manually using sharp or imagemagick');
+  console.log('Required sizes: 480w (sm), 768w (md), 1200w (lg)');
+  return Promise.resolve();
+}
 
 // Copy vendor files from /node_modules into /vendor
-// NOTE: requires `npm install` before running!
-gulp.task('copy', function() {
+function copyVendor() {
+  // Copy Bootstrap
   gulp.src([
       'node_modules/bootstrap/dist/**/*',
       '!**/npm.js',
-      '!**/bootstrap-theme.*',
       '!**/*.map'
     ])
-    .pipe(gulp.dest('vendor/bootstrap'))
+    .pipe(gulp.dest('vendor/bootstrap'));
 
-  gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
-    .pipe(gulp.dest('vendor/jquery'))
-
-  gulp.src(['node_modules/jquery.easing/*.js'])
-    .pipe(gulp.dest('vendor/jquery-easing'))
-
+  // Copy Font Awesome (if using local version)
   gulp.src([
       'node_modules/font-awesome/**',
       '!node_modules/font-awesome/**/*.map',
@@ -85,8 +96,9 @@ gulp.task('copy', function() {
       '!node_modules/font-awesome/*.md',
       '!node_modules/font-awesome/*.json'
     ])
-    .pipe(gulp.dest('vendor/font-awesome'))
+    .pipe(gulp.dest('vendor/font-awesome'));
 
+  // Copy Devicons
   gulp.src([
       'node_modules/devicons/**/*',
       '!node_modules/devicons/*.json',
@@ -96,30 +108,55 @@ gulp.task('copy', function() {
       '!node_modules/devicons/!SVG',
       '!node_modules/devicons/!SVG/**/*'
     ])
-    .pipe(gulp.dest('vendor/devicons'))
+    .pipe(gulp.dest('vendor/devicons'));
 
-  gulp.src(['node_modules/simple-line-icons/**/*', '!node_modules/simple-line-icons/*.json', '!node_modules/simple-line-icons/*.md'])
-    .pipe(gulp.dest('vendor/simple-line-icons'))
-})
+  // Copy Simple Line Icons
+  return gulp.src([
+      'node_modules/simple-line-icons/**/*',
+      '!node_modules/simple-line-icons/*.json',
+      '!node_modules/simple-line-icons/*.md'
+    ])
+    .pipe(gulp.dest('vendor/simple-line-icons'));
+}
 
-// Default task
-gulp.task('default', ['sass', 'minify-css', 'minify-js', 'copy']);
-
-// Configure the browserSync task
-gulp.task('browserSync', function() {
+// Configure BrowserSync
+function browserSyncServe(done) {
   browserSync.init({
     server: {
-      baseDir: ''
+      baseDir: './'
     },
-  })
-})
+    port: 3000
+  });
+  done();
+}
 
-// Dev task with browserSync
-gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() {
-  gulp.watch('scss/*.scss', ['sass']);
-  gulp.watch('css/*.css', ['minify-css']);
-  gulp.watch('js/*.js', ['minify-js']);
-  // Reloads the browser whenever HTML or JS files change
-  gulp.watch('*.html', browserSync.reload);
-  gulp.watch('js/**/*.js', browserSync.reload);
-});
+// BrowserSync Reload
+function browserSyncReload(done) {
+  browserSync.reload();
+  done();
+}
+
+// Watch files
+function watchFiles() {
+  gulp.watch('scss/**/*.scss', gulp.series(compileSass, minifyCSS));
+  gulp.watch(['js/navigation.js', 'js/lazy-loading.js', 'js/resume.js'], gulp.series(minifyJS, browserSyncReload));
+  gulp.watch('*.html', browserSyncReload);
+}
+
+// Define complex tasks
+const build = gulp.series(compileSass, minifyCSS, minifyJS);
+const buildWithImages = gulp.series(compileSass, minifyCSS, minifyJS, optimizeImages);
+const watch = gulp.parallel(watchFiles, browserSyncServe);
+
+// Export tasks
+exports.sass = compileSass;
+exports.minifyCSS = minifyCSS;
+exports.minifyJS = minifyJS;
+exports.images = optimizeImages;
+exports.responsiveImages = generateResponsiveImages;
+exports.copy = copyVendor;
+exports.build = build;
+exports.buildFull = buildWithImages;
+exports.watch = watch;
+exports.dev = gulp.series(build, watch);
+exports.default = build;
