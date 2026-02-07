@@ -119,6 +119,7 @@ section {
 .gradient-text {
     background: linear-gradient(90deg, var(--primary-orange), var(--primary-amber));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -206,7 +207,8 @@ section {
     color: var(--primary-orange);
 }
 
-.skill-item.hidden {
+.skill-item.hidden,
+.project-item.hidden {
     display: none;
 }
 

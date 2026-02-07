@@ -32,7 +32,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 const skillsSection = document.getElementById('skills');
 if (skillsSection) {
     const skillFilterButtons = skillsSection.querySelectorAll('.filter-btn');
-    const skillItems = document.querySelectorAll('.skill-item');
+    const skillItems = skillsSection.querySelectorAll('.skill-item');
 
     skillFilterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -56,7 +56,7 @@ if (skillsSection) {
 const projectsSection = document.getElementById('projects');
 if (projectsSection) {
     const projectFilterButtons = projectsSection.querySelectorAll('.filter-btn');
-    const projectItems = document.querySelectorAll('.project-item');
+    const projectItems = projectsSection.querySelectorAll('.project-item');
 
     projectFilterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
