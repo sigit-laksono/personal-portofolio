@@ -10,10 +10,6 @@ git clone <repo-url>
 
 # Buka langsung di browser
 open index.html
-
-# Atau jalankan local server
-python3 -m http.server 8000
-# Akses: http://localhost:8000
 ```
 
 ## 📁 Struktur
@@ -33,7 +29,6 @@ portfolio/
 - HTML5, CSS3, Vanilla JavaScript
 - Bootstrap 5 (CDN)
 - Lucide Icons (CDN)
-- No build process needed!
 
 ## ✨ Fitur
 
@@ -55,7 +50,7 @@ Edit di `css/custom-styles.css`:
 ```
 
 ### Tambah Konten
-Edit langsung di `index.html` - no build needed!
+Edit langsung di `index.html`
 
 ## 🚢 Deploy
 
@@ -68,9 +63,6 @@ Edit langsung di `index.html` - no build needed!
 ### Netlify / Vercel
 Drag & drop folder project - done!
 
-## 📚 Dokumentasi
-
-Lihat `Docs/README.md` untuk dokumentasi lengkap.
 
 ## 📄 License
 

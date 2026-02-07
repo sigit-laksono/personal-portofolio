@@ -1,20 +1,14 @@
 version: 1
 frontend:
   phases:
-    preBuild:
-      commands:
-        - npm install
+    # No build needed - pure static site!
     build:
       commands:
-        - npm run build:images
-        - npm run build:full
+        - echo "No build process needed for static site"
   artifacts:
     baseDirectory: /
     files:
       - '**/*'
-  cache:
-    paths:
-      - node_modules/**/*
   customHeaders:
     - pattern: '**/*.html'
       headers:
