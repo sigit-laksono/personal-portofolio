@@ -1,12 +1,16 @@
-# Portfolio - Muhammad Sigit Laksono
+# Personal Portfolio
 
-Portfolio website sederhana untuk Cloud Architect. Fully static - HTML, CSS, JavaScript saja.
+Personal Portfolio - Fully static website built with HTML, CSS, and JavaScript. Ready to deploy on GitHub Pages or any static hosting.
+
+![Portfolio Screenshot](ScreenShot/Screenshot-1.png)
+
+[🌐 Live Preview](https://sigitlaksono.my.id)
 
 ## 🚀 Quick Start
 
 ```bash
 # Clone repository
-git clone <repo-url>
+git clone <repository-url>
 
 # Buka langsung di browser
 open index.html
@@ -16,9 +20,9 @@ open index.html
 
 ```
 portfolio/
-├── index.html              # Halaman utama
+├── index.html              # HTML
 ├── css/
-│   └── custom-styles.css   # Styling
+│   └── custom-styles.css   # Styling CSS
 ├── js/
 │   └── main.js            # JavaScript
 └── img/                   # Images
@@ -40,8 +44,8 @@ portfolio/
 
 ## 📝 Customization
 
-### Ubah Warna
-Edit di `css/custom-styles.css`:
+### Change Colors
+Edit colors in `css/custom-styles.css`:
 ```css
 :root {
     --primary-orange: #f97316;
@@ -49,21 +53,9 @@ Edit di `css/custom-styles.css`:
 }
 ```
 
-### Tambah Konten
-Edit langsung di `index.html`
+### Change Content
+Edit content in `index.html`
 
 ## 🚢 Deploy
 
-### AWS Amplify
-1. Push ke GitHub
-2. Connect di Amplify Console
-3. Build settings: **None** (static site)
-4. Deploy!
-
-### Netlify / Vercel
-Drag & drop folder project - done!
-
-
-## 📄 License
-
-MIT License - bebas digunakan dan dimodifikasi.
+Deploy to GitHub Pages or any static hosting platform.
